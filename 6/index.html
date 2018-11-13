@@ -27,6 +27,13 @@ Para la solución puedes inspirarte en: https://codepen.io/gabrieleromanato/pen/
     <title></title>
   </head>
   <body>
-
+    <img src="1.jpg" alt="Alphonse">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script>
+    $('img').bind('contextmenu', function(e){
+      alert("Protegida!");
+      return false;
+    });
+    </script>
   </body>
 </html>

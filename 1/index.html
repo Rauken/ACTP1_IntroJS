@@ -1,6 +1,8 @@
 <!--
   El siguiente código no funciona.
+  *no tenia integrado el jQuery
   Identifica el error con el inspector de elementos
+  *Error al no poder comprender el script
   Agrega jQuery
   Utiliza el inspector de elementos para asegurar que se agregó la clase
   Agrega en el head la clase CSS para que el color del texto sea rojo
@@ -10,11 +12,18 @@
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>1</title>
+    <style>
+      .red{
+        color: red;
+      }
+    </style>
   </head>
   <body>
     <p> hola </p>
-    <script type="text/javascript">
+    <!--jQuery-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
       $("p").addClass("red");
     </script>
   </body>

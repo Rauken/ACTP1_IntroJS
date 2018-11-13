@@ -1,18 +1,17 @@
 <!--
   Sin modificar el HTML debes escribir los selectores que se necesitan para cada elemento pedido.
 
-  Seleccionar el H1 y cambiar el color de texto a rojo
-  Seleccionar la sección 1 (section-1) y agregar el color de fondo amarillo
-  Seleccionar el elemento con clase counter e incrementar en 10 su valor
-  Al hacerle click al elemento con id row-3 se debe agregar el color de fondo gris y además debe tener una transición de 1 segundo
-  Seleccionar el h1 dentro de la sección y duplicar su font-size
-  Seleccionar el último row dentro de la tabla (sin utilizar el id, puesto que el número de elementos podría cambiar) y agregar color de fondo rojo
 -->
 
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <style>
+      .red{
+        color: red;
+      }
+    </style>
     <title></title>
   </head>
   <body>
@@ -62,5 +61,30 @@
 
       </fieldset>
     </form>
+    <!--jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script>
+      <!--1 Seleccionar el H1 y cambiar el color de texto a rojo-->
+      $("h1").addClass("red");
+
+      <!--2 Seleccionar la sección 1 (section-1) y agregar el color de fondo amarillo-->
+      $(".section-1").css("background-color", "yellow");
+
+      <!--3 Seleccionar el elemento con clase counter e incrementar en 10 su valor-->
+      num = $(".counter").text();
+      num = parseInt(num);
+      $(".counter").text(num+10);
+
+      <!--4 Al hacerle click al elemento con id row-3 se debe agregar el color de fondo gris y además debe tener una transición de 1 segundo-->
+      $("#row-3").on("click", function(){
+        $("#row-3").css("background-color", "grey").delay(1000);
+      })
+
+      <!--5 Seleccionar el h1 dentro de la sección y duplicar su font-size-->
+      $("section.section-1 > h1").css("font-size", "3em");
+
+      <!--6 Seleccionar el último row dentro de la tabla (sin utilizar el id, puesto que el número de elementos podría cambiar) y agregar color de fondo rojo-->
+      $("tr:last").css("background-color", "red");
+    </script>
   </body>
 </html>
